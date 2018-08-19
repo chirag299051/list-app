@@ -1,0 +1,12 @@
+.container-fluid{
+    padding-left: 0px;
+}
+
+.heading {
+    color: white;
+    margin: 80px 50px 100px -50px;
+}
+
+hr {
+    border-color: white
+}

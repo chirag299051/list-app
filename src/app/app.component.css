@@ -1,0 +1,36 @@
+
+/*
+.main-back{
+     height: 40em; background-size: cover ; width:100%;
+     background-image:url("/assets/mac.jpg");
+     margin: 0;
+     padding: 0;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+*/
+
+.router-outlet {
+   /* background-color:rgb(220,220,220)*/
+     background-color:#263238
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /*background-color: rgb(60,60,60);*/
+    background-color:#212121;
+    color: rgb(170, 170, 170);
+    text-align: center;
+ }
+
+ .end {
+	font-size: .7em;
+	color: rgb(170, 170, 170);
+}
+
+h1 {
+    color: rgb(0,190,0);
+    font-family: Impact, Charcoal, sans-serif;
+}

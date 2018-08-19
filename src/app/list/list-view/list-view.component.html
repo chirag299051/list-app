@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-md-2">
+      <app-side-nav></app-side-nav>
+    </div>
+
+    <div class="col-md-10 heading" style="text-align:center">
+      
+      <div class="row" *ngIf="currentList">
+        <div class="col-md-12">
+          <h2>{{currentList.title}}</h2>
+          <p>created by {{currentList.author}} on {{currentList.created | date}}</p>
+          
+          <hr>
+          <div [innerHtml]="currentList.bodyHtml"></div>
+          <hr>
+          <h5>category - {{currentList.category}}</h5>
+        </div>
+      </div>
+      <hr>
+      <div class="row" *ngIf="currentList">
+        <div class="col-md-4">
+    
+          <a class="btn btn-primary"  [routerLink]="['/edit',currentList.listId]">Edit </a>
+    
+        </div>
+        <div class="col-md-4">
+    
+          <a class="btn btn-danger" (click)="deleteThisList()">Delete </a>
+    
+        </div>
+        <div class="col-md-4">
+    
+          <a class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+    

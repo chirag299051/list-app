@@ -1,0 +1,47 @@
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-md-2">
+      <app-side-nav></app-side-nav>
+    </div>
+
+    <div class="col-md-10">
+      <form #createListForm="ngForm" (ngSubmit)="createList()">
+
+        <div class="form-group">
+
+
+          <label>List Title</label>
+          <input type="text" name="listTitle" [(ngModel)]="listTitle" #title="ngModel" class="form-control" placeholder="Enter List Title"
+            required>/
+
+        </div>
+        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+          List Title is required 
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" name="listDescription" [(ngModel)]="listDescription" #description="ngModel" class="form-control" placeholder="Enter Description"
+            required>
+        </div>
+        <div class="form-group">
+          <label>Enter the List body</label>
+          <textarea name="listBodyHtml" [(ngModel)]="listBodyHtml" #bodyHtml="ngModel" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <select [(ngModel)]="listCategory" #category="ngModel" name="listCategory" class="form-control" id="category" required>
+                <option *ngFor="let category of possibleCategories" [value]="category">{{category}}</option>
+              </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-success" [disabled]="!createListForm.form.valid">Create the List</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+    

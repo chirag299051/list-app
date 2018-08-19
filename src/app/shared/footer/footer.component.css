@@ -1,0 +1,19 @@
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /*background-color: rgb(60,60,60);*/
+    background-color:#212121;
+    color: rgb(170, 170, 170);
+    text-align: center;
+ }
+
+ .end {
+	font-size: .7em;
+	color: rgb(170, 170, 170);
+}
+
+h1 {
+    color: rgb(0,190,0);
+    font-family: Impact, Charcoal, sans-serif;
+}

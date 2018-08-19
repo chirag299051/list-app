@@ -1,0 +1,16 @@
+.container-fluid {
+    padding-left: 0px;
+}
+
+.heading {
+    padding-top: 10px;
+    font-size:22px;
+    color: white;
+    margin: 50px 50px 100px -50px;
+    margin-bottom: 50px
+}
+
+.card {
+    margin-right: 70px;
+    margin-bottom: 50px
+}
