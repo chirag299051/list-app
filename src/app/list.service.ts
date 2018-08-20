@@ -49,7 +49,6 @@ export class ListService {
 
   deleteList(listId): any {
 
-    debugger;
     let data = {}
     let myResponse = this._http.post(this.baseUrl + '/' + listId + '/delete', data);
     return myResponse;
@@ -58,7 +57,6 @@ export class ListService {
 
   editList(listId,listData): any {
 
-    listId="487636535";
     let myResponse = this._http.put(this.baseUrl + '/' + listId + '/edit', listData)
     return myResponse;
 

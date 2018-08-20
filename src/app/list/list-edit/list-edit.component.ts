@@ -25,32 +25,31 @@ export class ListEditComponent implements OnInit {
     let myListId = this._route.snapshot.paramMap.get('listId');
     console.log(myListId)
  
-    // this.listService.getSingleListInformation(myListId).subscribe(
+    this.listService.getSingleListInformation(myListId).subscribe(
 
-    //   data => {
-    //     console.log(data);
-    //     this.currentList = data["data"];
-    //     console.log("current List is");
-    //     console.log(this.currentList);
+      data => {
+        console.log(data);
+        this.currentList = data["data"];
+        console.log("current List is");
+        console.log(this.currentList);
 
-    //   },
-    //   error => {
-    //     console.log("some error occured");
-    //     console.log(error.errorMessage)
-    //   }
+      },
+      error => {
+        console.log("some error occured");
+        console.log(error.errorMessage)
+      }
 
 
-    // )
+    )
 
-    this.currentList={title: "hmcv,", description: "xcvbn", listBody: "sdfghjklkjhghjkn", category: "Work"};
+   // this.currentList={title: "hmcv,", description: "xcvbn", bodyHtml: "sdfghjklkjhghjkn", category: "Work"};
   }
 
   editThisList(): any {
-debugger;
-    this.listService.editList(this.currentList.ListId,this.currentList).subscribe(
+console.log("bye "+this.currentList.listId);
+    this.listService.editList(this.currentList.listId,this.currentList).subscribe(
 
       data => {
-        debugger;
         console.log(data);
         this.toastr.success('List edited successfully', 'Success!');
         setTimeout(() => {
@@ -59,7 +58,6 @@ debugger;
 
       },
       error => {
-        debugger;
         console.log("some error occured");
         console.log(error.errorMessage);
         this.toastr.error('Some error occured', 'Error');

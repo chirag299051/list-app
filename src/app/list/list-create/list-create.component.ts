@@ -31,7 +31,7 @@ export class ListCreateComponent implements OnInit {
 
       title: this.listTitle,
       description: this.listDescription,
-      listBody: this.listBodyHtml,
+      bodyHtml: this.listBodyHtml,
       category: this.listCategory
 
     }
