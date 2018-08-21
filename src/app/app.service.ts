@@ -11,7 +11,7 @@ import { HttpErrorResponse, HttpParams } from '@angular/common/http';
 @Injectable()
 export class AppService {
 
-  private url = /* 'https://list-api.chirag9.com'; */ 'http://localhost:3000';
+  private url = 'http://list-api.chirag9.com';
 
   constructor(public http: HttpClient) { }
 
