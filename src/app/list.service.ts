@@ -13,7 +13,7 @@ export class ListService {
 
   public allLists;
   public currentList;
-  public baseUrl = 'http://localhost:3000/api/v1/lists';
+  public baseUrl = 'http://list-api.chirag9.com/api/v1/lists';
 
   constructor(private _http:HttpClient) { 
     console.log('list-http service was called');
